@@ -9,3 +9,9 @@
 ```bash
 go run .
 ```
+
+### 3. Verify
+* Method 1: Open Browser
+  * visit: https://zsxxx.com:9996
+* Method 2: Curl
+  * run: `curl --cacert $PWD/server.ca.crt --key $PWD/server.key https://zsxxx.com:9996`
