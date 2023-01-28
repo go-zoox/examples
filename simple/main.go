@@ -3,10 +3,11 @@ package main
 import (
 	"github.com/go-zoox/fs"
 	"github.com/go-zoox/zoox"
+	"github.com/go-zoox/zoox/defaults"
 )
 
 func main() {
-	r := zoox.Default()
+	r := defaults.Application()
 
 	r.Static("/assets", fs.CurrentDir())
 
