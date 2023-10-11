@@ -12,7 +12,7 @@ func main() {
 	r.Static("/assets", fs.CurrentDir())
 
 	r.Get("/", func(ctx *zoox.Context) {
-		ctx.Write([]byte("helloworld"))
+		ctx.Write([]byte("helloworld7"))
 	})
 
 	r.Get("/panic", func(ctx *zoox.Context) {
@@ -49,5 +49,7 @@ func main() {
 		})
 	}
 
-	r.Run(":8080")
+	if err := r.Run(":8080"); err != nil {
+		panic(err)
+	}
 }
